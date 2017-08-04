@@ -1,3 +1,4 @@
+# O(n*log(log(n)))
 def primes_till(n):  # Sieve of Eratosthenes
     p = [True] * n
     for i in range(2, n):

@@ -3,11 +3,13 @@ class FenwickTree:
         self.arr = [0] * size
         self.n = size
 
+    # O(log(n))
     def add(self, i, val):
         while i < self.n:
             self.arr[i] += val
             i |= i + 1
 
+    # O(log(n))
     def sum(self, i):  # sum for [0..i)
         i -= 1
         res = 0
