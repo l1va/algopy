@@ -30,5 +30,10 @@ def main():
     assert ft.sum(4) == 16
     assert ft.sum(5) == 17
 
+    n = 10**6
+    ft = FenwickTree(n)
+    for i in range(n):
+        ft.add(i, i + 1)
+    assert ft.sum(10 ** 5) - ft.sum(100) == (10 ** 5 + 1) * (10 ** 5 / 2) - (100 + 1) * 50  # 5000044950
 
 main()
