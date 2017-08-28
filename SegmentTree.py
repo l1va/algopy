@@ -1,11 +1,11 @@
 class SegmentTree:
+    # O(n)
     def __init__(self, a):
         self.n = len(a)
         self.src = a
         self.arr = [0] * 4 * self.n
         self._build(1, 0, self.n - 1)
 
-    # O(n)
     def _build(self, cur, l, r):
         if l == r:
             self.arr[cur] = self.src[l]
